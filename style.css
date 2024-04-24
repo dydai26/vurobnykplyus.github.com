@@ -1,0 +1,2284 @@
+body, h1, h2, p, img {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    
+    
+}
+header {
+    position: relative;
+}
+
+#bannerCarousel {
+    width: 100%; /* Розмір каруселі на весь екран */
+}
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+  
+}
+.carousel-inner {
+    text-align: center; /* Центрування зображення в каруселі */
+}
+
+.carousel-item img{
+    max-width: 100%;
+    height: auto; 
+    width: auto;
+    position: relative;
+    
+}
+/* Стилі для попапа */
+.popup-baner {
+  position: absolute; /* Позиціонуємо попап відносно контейнера банера */
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8); /* Прозорий фон */
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 9999; /* Збільште індекс шару для забезпечення відображення попереду інших елементів */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Тінь */
+}
+
+/* Стилі для тексту всередині попапа */
+.popup-content-baner {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #3A3C99; /* Білий текст для контрасту */
+  text-shadow: 1px 1px 1px white; /* Тінь для читабельності */
+}
+.popup-img {
+  max-width: 100%;  /* Щоб зображення не перевищувало ширину контейнера */
+  height: auto;    /* Підтримка пропорцій */
+}
+@media (max-width: 980px) {
+  .popup-baner {
+    top: 58%;
+    width: 250px; /* Зменшена ширина для невеликих екранів */
+    height: auto; /* Зменшена висота */
+    padding: 10px; /* Менше заповнення */
+    right: 5%; /* Відступ з правого краю */
+  }
+
+  .popup-content-baner {
+    font-size: 16px; /* Менший розмір шрифту */
+  }
+}
+
+@media (max-width: 900px) {
+  .popup-baner {
+    top: 58%;
+    width: 250px; /* Зменшена ширина для невеликих екранів */
+    height: 270px; /* Зменшена висота */
+    padding: 10px; /* Менше заповнення */
+    right: 5%; /* Відступ з правого краю */
+  }
+
+  .popup-content-baner {
+    font-size: 14px; /* Менший розмір шрифту */
+  }
+  .popup-img{
+    width: 100%;
+    height: 100px;
+  }
+}
+@media (max-width: 800px) {
+  .popup-baner {
+    top: 62%;
+    width: 250px; /* Зменшена ширина для невеликих екранів */
+    height: 200px; /* Зменшена висота */
+    padding: 10px; /* Менше заповнення */
+    right: 5%; /* Відступ з правого краю */
+  }
+
+  .popup-content-baner {
+    font-size: 14px; /* Менший розмір шрифту */
+  }
+  .popup-img{
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  .popup-baner {
+    display: none;
+  }
+}
+
+
+/* header*/
+/* Основний хедер */
+#header {
+    background-color: #3A3C99;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.ImgLogo {
+    width: 114px;
+    max-width: 140px;
+    height: 60px;
+    flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+}
+
+.ImgLogo:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    font-size: 20px;
+    font-weight: normal;
+    cursor: pointer;
+    position: absolute;
+    top: 11px;
+    bottom: 11px;
+    transform: translateY(-5%);
+    transition: transform 0.1s ease;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.menu-item a{
+    color: white;
+}
+
+.menu-item:hover,
+.menu-item:hover a {
+    transform:  scale(1.1);
+    transition: transform 0.1s ease;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-item:nth-child(1) { left: 15%; }
+.menu-item:nth-child(2) { left: 30%; }
+.menu-item:nth-child(3) { right: 30%; }
+.menu-item:nth-child(4) { right: 15%; }
+
+
+/* Значки мови */
+/* Значки мови */
+.languageTogglefalguk {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 80px; /* Відступ з права 60px */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.languageToggleflagen2 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right:  30px; /* Відступ зліва 20px */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Відступ між ними 20px */
+}
+
+.popup-header {
+  width: 190px; /* Задаємо ширину попапа */
+  height: 80px; /* Задаємо висоту попапа */
+  display: none; /* Закриваємо попап за замовчуванням */
+  position: absolute; /* Позиціонуємо абсолютно */
+  top: calc(100% + -10px); /* Розміщуємо під текстом "Продукція" */
+  right: 1%; /* Розміщуємо по горизонталі в центрі */
+  transform: translateX(-50%); /* Центруємо по горизонталі */
+  padding: 12px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc; /* Рамка */
+  border-radius: 5px; /* Закруглені кути */
+  z-index: 1; /* Позиціонуємо попап поверх іншого вмісту */
+}
+
+.popup-header p {
+  margin: 0; /* Відступи від країв контейнера */
+  font-size: 16px; /* Розмір шрифту */
+  font-weight: bold; /* Жирний шрифт */
+  color:#3A3C99; /* Колір тексту */
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  text-decoration: none;
+}
+.popup-header p:hover {
+  transform: scale(1.1);
+}
+#product-link {
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (max-width: 1600px) {
+  .popup-header {
+    left: 85%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .popup-header {
+    left: 85%;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .popup-header {
+    left: 85%;
+  }
+}
+.txt111{
+  width: 40px;
+  height: 40px;
+  display: inline-block; /* Дозволяє елементам займати тільки необхідний простір */
+  padding: 6px 5px; /* Додаткові відступи для кільця */
+  border: 2px solid white; /* Товщина та колір обводки */
+  border-radius: 50%; /* Заокруглення кутів, щоб створити кругле кільце */
+  text-align: center; /* Вирівнювання тексту по центру */
+}
+.txt111:hover {
+  transform:  scale(1.1);
+  transition: transform 0.1s ease;
+}
+@media only screen and (max-width: 900px) {
+  header {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #header{
+      display: none;
+  }
+  .main-header{
+      display: none;
+  }
+}    
+
+
+/* Стилі закріпленого хедера */
+#sticky-header {
+    background-color: rgba(255, 255, 255, 0.93);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    color: #3A3C99;
+    width: 100%;
+    z-index: 2;
+    display: none; /* Початково ховаємо закріплений хедер */
+    /* Додайте інші стилі за потребою */
+}
+
+#sticky-header {
+    transition: opacity 0.3s ease;
+}
+.menu-item2 a{
+  color: #3A3C99;
+  text-decoration: none; 
+}
+.menu-item2 {
+  font-size: 20px;
+  font-weight: normal;
+  cursor: pointer;
+  position: absolute;
+  top: 11px;
+  bottom: 11px;
+  transform: translateY(-5%);
+  transition: transform 0.1s ease;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.menu-item2:nth-child(1) { left: 15%; }
+.menu-item2:nth-child(2) { left: 30%; }
+.menu-item2:nth-child(3) { right: 15%; }
+.menu-item2:nth-child(4) { right: 30%; }
+
+.menu-item2:hover,
+.menu-item2:hover a {
+    transform:  scale(1.1);
+    transition: transform 0.1s ease;
+    color: #3A3C99;
+    text-decoration: none;
+}
+/* Клас для приховування закріпленого хедера */
+.hidden {
+ opacity: 0;
+}
+.ImgLogo-2 {
+    width: 110px;
+    max-width: 140px;
+    height: 45px;
+    flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    top: 3px;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease;
+}
+
+.ImgLogo-2:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+.txt112{
+  width: 40px;
+  height: 40px;
+  display: inline-block; /* Дозволяє елементам займати тільки необхідний простір */
+  padding: 6px 5px; /* Додаткові відступи для кільця */
+  border: 2px solid #3a3c99; /* Товщина та колір обводки */
+  border-radius: 50%; /* Заокруглення кутів, щоб створити кругле кільце */
+  text-align: center; /* Вирівнювання тексту по центру */
+}
+.txt112:hover {
+  transform:  scale(1.1);
+  transition: transform 0.1s ease;
+}
+
+/* humburger */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  background-color: #3A3C99;
+  padding-top: 60px; /* змінено висоту на 60px */
+  box-sizing: border-box;
+  z-index: 998;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column; /* Розміщення в стовпчик */
+  justify-content: center; /* Вирівнювання по вертикалі по центру */
+  align-items: center; /* Вирівнювання по горизонталі по центру */
+  height: 100%;
+  
+}
+
+.mobile-nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Розміщення в стовпчик */
+}
+
+.mobile-nav ul li {
+  margin-bottom: 20px;
+}
+
+.mobile-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+}
+
+.mobile-nav a:hover {
+  
+  text-decoration: none; /* Забираємо підкреслення */
+  color: yellow; /* Колір тексту залишаємо білим */
+}
+
+
+.logo-icon{
+  width: 150px;
+  height: 80px;
+}
+
+.logo-container {
+  width: 200px;
+  height: auto;
+  margin: auto;/* Зміщення вправо (відстань від лівого краю) */
+}
+.ImgLogo2 {
+  display: flex;
+  position: fixed;
+  width: 170px;
+  height: 100px;
+  flex-shrink: 0;
+  z-index: 999;
+  left: 50%;
+  top: -8px;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+}
+
+.ImgLogo2:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.languege {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  color: #fff;
+  width: 125px;
+  top: 25px;
+  right: 30px;
+  z-index: 999;
+}
+
+.languege h3 {
+  font-size: 18px;
+  width: 48px;
+  height: 43px;
+  margin-right: 10px;
+  top: 15px;
+  z-index: 999;
+  cursor: pointer;
+  display: inline-block; /* Дозволяє елементам займати тільки необхідний простір */
+  padding: 10px 5px; /* Додаткові відступи для кільця */
+  border: 2px solid white; /* Товщина та колір обводки */
+  border-radius: 50%; /* Заокруглення кутів, щоб створити кругле кільце */
+  text-align: center; /* Вирівнювання тексту по центру */
+}
+.languege-item {
+  transition: transform 0.3s ease; /* Плавне перехід transform протягом 0.3 секунди з ефектом ease */
+}
+
+.languege-item:hover {
+  transform: scale(1.1); /* Збільшення розміру на 10% при наведенні */
+}
+
+
+
+.mobile-menu.open {
+  display: block;
+}
+.mobile-menu {
+  display: none;
+ 
+}
+
+
+@media only screen and (max-width: 760px) {
+  .container {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .ImgLogo2 {
+    width: 150px;
+    height: inherit;
+    top: 3px;
+    
+  }
+
+  .languege h3 {
+      font-size: 14px;
+      width: 40px;
+      height: 35px;
+  }
+
+  .languege {
+    width: 100px;
+    top: 3px;
+    right: 10px;
+    position: absolute;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .languege {
+    right: 10px;
+    width: 100px;
+    top: 3px;
+  }
+  
+
+} 
+@media only screen and (max-width: 900px) {
+  .header-container {
+    display: none;
+  }
+}
+@media only screen and (min-width: 901px) {
+  .header-container {
+    display: none !important;
+  }
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  background-color: rgba(58, 60, 153, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Додаткові відступи по боках */
+  box-sizing: border-box; /* Ураховує відступи в бокс-моделі */
+  z-index: 999; /* Шар поверх інших елементів */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-icon,
+.logo-container,
+.languege {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.socia-icon-header{
+  display: flex;
+  gap: 20px;
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  justify-content: center;
+}
+.socia-icon2{
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.socia-icon2:hover {
+  transform: scale(1.1);
+}
+
+
+/* Catalog */
+.Catalog-block {
+  max-width: 100%;
+  
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-image: url('./IMG/Білий фон.jpg');
+  background-size: cover;
+  background-position:center ;
+}
+
+.Image-container {
+  display: flex;
+  flex-wrap:wrap;
+  gap: 30px;     
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  max-width: 100%;
+  margin-bottom: 0;   
+}
+.image-overlay{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 0;
+}
+.image{
+  max-width:300px;
+  max-height: 300px; 
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+
+
+/* tittle*/
+.title-catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+ 
+}
+
+.Line-title1,
+.Line-title2 {
+  position: relative;
+  width: 230px;
+  height: 5px;
+  
+}
+
+.Line-titlle1,
+.Line-title2 {
+  position: relative;
+  max-width: 200px;
+  height: 5px;
+  display: flex;
+  margin: 15px auto; /* Змінено з 10px на 20px або інше значення за потребою */
+}
+
+.text-container1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 46px;
+  line-height: 60px;
+  letter-spacing: 1px;
+  top: 45px;
+  position: relative; 
+  text-align: center;
+  margin-bottom: 65px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #3A3C99;
+}
+
+.img-titlle2{
+  position: absolute;
+  top: 82%; /* Знаходиться на середині відносно висоти */
+  left: 50%; /* Знаходиться на середині відносно ширини */
+  transform: translate(-50%, -50%)scale(1.0);
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  z-index: 1;
+}
+.img-titlle2:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.button-titlle2{
+  font-family:"Roboto Condensed", sans-serif;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#3A3C99;
+  font-size: 16px;
+  z-index: 1;
+}
+
+/* Кнопка і текст вівсяне */
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.overlay{
+  display: block;
+  position: relative;
+  display: flex;
+  opacity: 0;
+}
+.overlay.animate {
+  animation: 1s ease-in-out 1s 1 normal forwards slide-in-top;
+}
+.img-container {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  
+}
+.hover-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./IMG/Вівсяне\ група\ 2.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.img-container:hover .hover-image {
+  opacity: 1;
+}
+
+
+/* Кнопка і текст кукурудзяне */
+.overlay1{
+  position: relative;
+  display: flex;
+  opacity: 0;
+}
+.overlay1.animate {
+animation: 1.2s ease-in-out 1.3s 1 normal forwards slide-in-top;
+}
+
+.img-container2 {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.hover-image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./IMG/Кук\ титул2.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.img-container2:hover .hover-image2 {
+opacity: 1;
+}
+
+.img-icon1{
+  display: block;
+  position: absolute;
+  top: 90%; /* Знаходиться на середині відносно висоти */
+  left: 50%; /* Знаходиться на середині відносно ширини */
+  transform: translate(-50%, -50%)scale(1.0);
+  width: 140px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  z-index: 1;
+}
+.img-icon1:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.button-text2{
+  font-family:"Roboto Condensed", sans-serif;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3A3C99;
+  font-size: 16px;
+  z-index: 1;
+  cursor: pointer;
+  }
+/* Кнопка і текст сушка */
+
+
+.img-container3 {
+position: relative;
+display: inline-block;
+max-width: 100%;
+max-height: 300px;
+overflow: hidden;
+}
+
+.hover-image3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./IMG/Хрустяшка\ фас.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.img-container3:hover .hover-image3 {
+opacity: 1;
+}
+
+.overlay2{
+display: block;
+position: relative;
+display: flex;
+opacity: 0;
+}
+.overlay2.animate {
+animation: 1s ease-in-out 1.9s 1 normal forwards slide-in-top;
+}
+
+/* Кнопка і текст сухар */
+
+
+.overlay3{
+display: block;
+position: relative;
+display: flex;
+opacity: 0;
+}
+
+.overlay3.animate {
+animation: 1s ease-in-out 2.1s 1 normal forwards slide-in-top;
+}
+
+.img-container4 {
+position: relative;
+display: inline-block;
+max-width: 100%;
+max-height: 300px;
+overflow: hidden;
+}
+
+.hover-image4 {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: bisque;
+background-image: url('./IMG/Сухар\ титул2.jpg');
+background-size: cover;
+background-position: center;
+opacity: 0;
+transition: opacity 0.8s ease-in-out;
+}
+
+.img-container4:hover .hover-image4 {
+opacity: 1;
+}
+
+/* Кнопка і текст кондитерка */
+
+.overlay4{
+display: block;
+position: relative;
+display: flex;
+opacity: 0;
+}
+
+.overlay4.animate {
+animation: 1s ease-in-out 2.4s 1 normal forwards slide-in-top;
+}
+
+.img-container5 {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.hover-image5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./IMG/Труб2.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.img-container5:hover .hover-image5 {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 350px) {
+  .overlay,
+  .overlay2,
+  .overlay3,
+  .overlay4{
+    align-items: center;
+    width: 250px;
+    height: 250px;
+}
+.image{
+  width: 250px;
+    height: 250px;
+}
+}
+
+
+
+
+/* блок новини */
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.news-block {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-image: url('./IMG/fon-blue.png');
+  background-size: cover;
+  background-position:center ;
+  display: flex;
+  flex-direction: column; /* Змінено на column */
+  align-items: center; /* Додано */
+}
+
+.Tittle-news-frame,
+.news-line-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Змінено на центральне вирівнювання */
+  max-width: 100%;
+  
+}
+
+.Tittle-news-frame {
+  align-items: center;
+  padding: 0 26px; /* Перевизначено padding для центрування */
+  box-sizing: border-box;
+  gap: 0 38px;
+  
+}
+
+.news-frame-set,
+.news-frame-set1 {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 9px 0 0;
+  box-sizing: border-box;
+}
+
+.line-news-1,
+.line-news-2 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  height: 3.5px;
+  margin-top: 43%;
+}
+.news-parent-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Змінено на центральне вирівнювання */
+  justify-content: flex-start;
+  padding: 0 15px 0 15px;
+  width: 300px;
+}
+
+.tittle-news {
+  margin: 0;
+  margin-top: 20%;
+  height: 55px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 300;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 1px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  color: white;
+}
+
+
+.img-container-news {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding: 1%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.news-img-1 {
+  max-width: 300px;
+  max-height: 300px; 
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+ 
+.Overlay-news { 
+  display: block;
+  position: relative;
+  opacity: 0; /* Змінив на 1, щоб зображення були видимі */
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+}
+.Overlay-news.animate {
+  animation: 1s ease-in-out 0.5s 1 normal forwards slide-in-top;
+}
+.Overlay-news2 { 
+  display: block;
+  position: relative;
+  opacity: 0; /* Змінив на 1, щоб зображення були видимі */
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+}
+.Overlay-news2.animate {
+  animation: 1s ease-in-out 0.8s 1 normal forwards slide-in-top;
+}
+.Overlay-news3 { 
+  display: block;
+  position: relative;
+  opacity: 0; /* Змінив на 1, щоб зображення були видимі */
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+}
+.Overlay-news3.animate {
+  animation: 1s ease-in-out 1.1s 1 normal forwards slide-in-top;
+}
+
+.txt-button-news{
+  font-family:"Roboto Condensed", sans-serif;
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3A3C99;
+  font-size: 16px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.button-news-icon{
+  display: block;
+  position: absolute;
+  top: 90%; /* Знаходиться на середині відносно висоти */
+  left: 50%; /* Знаходиться на середині відносно ширини */
+  transform: translate(-50%, -50%)scale(1.0);
+  width: 170px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.button-news-icon:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.button-news {
+  align-self: flex-end; /* Або margin-top: auto; */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding: 1%;
+    max-width: 100%;
+    margin: 0;
+}
+.txt-button-news2{
+  font-family:"Roboto Condensed", sans-serif;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3A3C99;
+  font-size: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.Overlay-news4 { 
+  position: relative;
+  display: flex;
+  opacity: 1; /* Змінив на 1, щоб зображення були видимі */
+  cursor: pointer;
+  width: 100%;
+  height: 70px;
+}
+.button-news-icon2{
+  display: flex;
+  position: absolute;
+  top: 50%; /* Знаходиться на середині відносно висоти */
+  left: 50%; /* Знаходиться на середині відносно ширини */
+  transform: translate(-50%, -50%)scale(1.0);
+  width: 170px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.button-news-icon2:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+@media only screen and (max-width: 350px) {
+  .Overlay-news,
+  .Overlay-news2,
+  .Overlay-news3 {
+    align-items: center;
+    width: 250px;
+    height: 250px;
+}
+.news-img-1 {
+  align-items: center;
+  width: 250px;
+  height: 250px;
+}
+.line-news-1,
+.line-news-2{
+  display: none;
+}
+}
+
+
+/* блок про нас */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.About-us-block{
+  width: 100%;
+  padding: 5%;
+  margin: 0;
+  overflow: hidden;
+  background-image: url('./IMG/Білий фон.jpg');
+  background-size: cover;
+  background-position:center ;
+}
+.About-us{
+  display: flex;
+  align-items: center; /* Вирівнюємо елементи по вертикалі */
+  justify-content: center; /* Рівномірно розподіляє елементи вздовж осі головного контейнера */
+  flex-wrap: wrap; /* Дозволяє елементам переноситися на новий ряд, якщо вони не поміщаються в одному рядку */
+  gap: 10px; /* Відступ між елементами */
+  padding: 10px; 
+  flex-direction: row;
+}
+  
+.about-us-Img,
+.txt-container {
+  flex: 1; /* Розтягуємо елементи, щоб вони займали доступне простір */
+  max-width: calc(50% - 40px); /* Встановлюємо максимальну ширину для елементів, щоб вони займали половину доступного простору з урахуванням відступу */
+}
+
+.about-us-Img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 0;
+}
+.about-us-Img.animate {
+  animation: 1s ease-in-out 0.3s 1 normal forwards slide-in-left;
+}
+
+.about-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: 10px 3px;
+}
+
+.Tittle-list-frame,
+.catalog-line-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Центрування елементів в рядку */
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 2%;
+}
+.catalog-parent-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Змінено на центральне вирівнювання */
+  justify-content: flex-start;
+  opacity: 0;
+}
+
+.catalog-parent-frame.animate {
+  animation: 1s ease-in-out 0.3s 1 normal forwards slide-in-top;
+}
+
+.Tittle-list-frame {
+  align-items: center;
+}
+.tittle-catalog {
+  height: 100%;
+  width: 200px;
+  position: relative;
+  color: #3A3C99;
+  font-weight: 300;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 1px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 40px;
+}
+.catalog-frame-set,
+.catalog-frame-set1 {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 9px 0 0;
+  box-sizing: border-box;
+}
+
+.line-catalog-1,
+.line-catalog-2 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: fill;
+  height: 3.5px;
+  margin-top: 10%;
+}
+.txt-container2 {
+  width: 100%;
+  height: 100%;  
+  opacity: 0;
+}
+.txt-container2.animate {
+  animation: 1s ease-in-out 1s 1 normal forwards slide-in-top;
+}
+
+.txt-1 {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.4;
+  color: #3A3C99;
+  text-align: center;
+  margin: 5px;
+  padding: 0; /* Центрування тексту */
+}
+
+.button-about {
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 1%;
+  max-width: 100%;
+}
+
+.txt-button-about{
+  font-family:"Roboto Condensed", sans-serif;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3A3C99;
+  font-size: 16px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.Overlay-about { 
+  position: relative;
+  display: flex;
+  opacity: 1; /* Змінив на 1, щоб зображення були видимі */
+  cursor: pointer;
+  width: 100%;
+  height: 70px;
+}
+.button-about-icon2{
+  display: flex;
+  position: absolute;
+  top: 50%; /* Знаходиться на середині відносно висоти */
+  left: 50%; /* Знаходиться на середині відносно ширини */
+  transform: translate(-50%, -50%)scale(1.0);
+  width: 170px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.button-about-icon2:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+@media only screen and (max-width: 760px) {
+  .About-us {
+      flex-direction: column;
+  }
+
+  .about-us-Img,
+  .txt-container {
+      max-width: 80%;
+      margin-bottom: 20px; /* Додайте потрібний відступ між елементами */
+  }
+  .tittle-catalog{
+      font-size: 30px;
+  }
+  .about-us-Img {
+      align-items: center;
+  }
+
+  .txt-1 {
+      height: auto; /* Змініть висоту на автоматичну, щоб текст можна було прокручувати */
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .About-us {
+      flex-direction: column;
+  }
+
+  .about-us-Img,
+  .txt-container {
+      max-width: 80%;
+      margin-bottom: 20px; /* Додайте потрібний відступ між елементами */
+  }
+
+  .about-us-Img {
+      align-items: center;
+  }
+
+  .txt-1 {
+      height: auto; /* Змініть висоту на автоматичну, щоб текст можна було прокручувати */
+  }
+  .tittle-catalog{
+      font-size: 35px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .About-us {
+      flex-direction: column;
+  }
+
+  .about-us-Img,
+  .txt-container {
+      max-width: 80%;
+      margin-bottom: 20px; /* Додайте потрібний відступ між елементами */
+  }
+  .tittle-catalog{
+      font-size: 30px;
+  }
+  .about-img {
+      align-items: center;
+      width: 250px;
+      height: 250px;
+  }
+
+  .txt-1 {
+      height: auto; /* Змініть висоту на автоматичну, щоб текст можна було прокручувати */
+  }
+  .line-catalog-1,
+  .line-catalog-2{
+    display: none;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .about-img {
+    align-items: center;
+    width: 200px;
+    height: 200px;
+}
+}
+
+/* блок переваги */
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.block-perevagu {
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-image: url('./IMG/fon-blue.png');
+  background-size: cover;
+  background-position:center ;
+}
+.Tittle-perevagu-frame,
+.perevagu-line-frame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Змінено на центральне вирівнювання */
+  max-width: 100%;
+}
+
+.Tittle-perevagu-frame {
+  align-items: center;
+  padding: 0 26px; /* Перевизначено padding для центрування */
+  box-sizing: border-box;
+  gap: 0 38px;
+  margin-top: 40px;
+}
+
+.perevagu-frame-set,
+.perevagu-frame-set1 {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 9px 0 0;
+  box-sizing: border-box;
+}
+
+.line-perevagu-1,
+.line-perevagu-2 {
+  align-self: stretch;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: fill;
+  height: 3.5px;
+  margin-top: 26%;
+}
+
+.perevagu-parent-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Змінено на центральне вирівнювання */
+    justify-content: flex-start;
+    padding: 0 15px 0 15px;
+}
+  
+.tittle-perevagu{
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    height: 55px;
+    width: 100%;
+    position: relative;
+    color: white;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 1px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 40px;
+}
+
+
+.star-container {
+  display: flex;
+  flex-wrap:wrap;
+  gap:0 30px;   
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 6%;
+  max-width: 100%;
+  margin-bottom: 0; 
+}
+
+
+.star-conteinet1{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+}
+
+.Overlay-img1 {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  opacity: 0;
+}
+.Overlay-img1.animate {
+  animation: slide-in-top 1s ease-in-out 1s 1 normal forwards;
+}
+
+.img-1 {
+  max-width: 250px;
+  max-height: 250px;
+  display: block;
+}
+
+.star_1 {
+  position: absolute;
+  top: 45%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.txt-2-1 {
+  width: 240px;
+  position: relative;
+  font-size: 16px;
+  color:#fff;
+  display: flex;
+  z-index: unset;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  line-height: 1.3;
+  bottom: 5%;
+  justify-content: center;
+  opacity: 0;
+}
+.txt-2-1.animate {
+  animation: slide-in-top 1s ease-in-out 1.1s 1 normal forwards;
+}
+
+.star-conteinet2{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+}
+
+.Overlay-img2 {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  opacity: 0;
+}
+.Overlay-img2.animate {
+  animation: slide-in-top 1s ease-in-out 1.3s 1 normal forwards;
+}
+
+.img-2 {
+  max-width: 250px;
+  max-height: 250px;
+  display: block;
+}
+
+.star_2 {
+  position: absolute;
+  top: 45%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+.txt-2-2 {
+  width: 240px;
+  position: relative;
+  font-size: 16px;
+  color:#fff;
+  display: flex;
+  z-index: unset;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  line-height: 1.3;
+  bottom: 5%;
+  justify-content: center;
+  opacity: 0;
+}
+.txt-2-2.animate {
+  animation: slide-in-top 1s ease-in-out 1.4s 1 normal forwards;
+}
+
+.star-conteinet3{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+}
+
+.Overlay-img3 {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  opacity: 0;
+}
+.Overlay-img3.animate {
+  animation: slide-in-top 1s ease-in-out 1.5s 1 normal forwards;
+}
+
+.img-3 {
+  max-width: 250px;
+  max-height: 250px;
+  display: block;
+}
+
+
+.star_3 {
+  position: absolute;
+  top: 45%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+}
+.txt-2-3 {
+  width: 240px;
+  position: relative;
+  font-size: 16px;
+  color:#fff;
+  display: flex;
+  z-index: unset;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  line-height: 1.3;
+  bottom: 5%;
+  justify-content: center;
+  opacity: 0;
+}
+.txt-2-3.animate {
+  animation: slide-in-top 1s ease-in-out 1.6s 1 normal forwards;
+}
+
+.star-conteinet4{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+}
+
+.Overlay-img4 {
+  position: relative;
+  display: inline-block;
+  flex-direction: column;
+  opacity: 0;
+}
+.Overlay-img4.animate {
+  animation: slide-in-top 1s ease-in-out 1.7s 1 normal forwards;
+}
+
+.img-4 {
+  max-width: 250px;
+  max-height: 250px;
+  display: block;
+}
+
+.star_4 {
+  position: absolute;
+  top: 45%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+}
+.txt-2-4 {
+  width: 240px;
+  position: relative;
+  font-size: 16px;
+  color:#fff;
+  display: flex;
+  z-index: unset;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 12%;
+  justify-content: center;
+  opacity: 0;
+}
+.txt-2-4.animate {
+  animation: slide-in-top 1s ease-in-out 1.8s 1 normal forwards;
+}
+@media screen and (max-width: 1238px) {
+  .star-container {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .line-perevagu-1,
+  .line-perevagu-2 {
+    display: none;
+  }
+  .perevagu-parent-frame{
+    width: 400px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .tittle-perevagu{
+    font-size: 32px;
+  }
+  .perevagu-parent-frame{
+    width: 400px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .tittle-perevagu{
+    font-size: 32px;
+    text-align: center;
+  }
+  .perevagu-parent-frame{
+    width: 500px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .tittle-perevagu{
+    font-size: 32px;
+    text-align: center;
+  }
+  .perevagu-parent-frame{
+    width: 500px;
+  }
+}
+
+
+
+
+/* блок партнери */
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.line-successful-icon {
+  align-self: stretch;
+  height: 3px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.line-successful-wrapper {
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px 5px 20px 0;
+  box-sizing: border-box;
+}
+.div {
+  position: relative;
+  white-space: nowrap;
+}
+.line-successful-2 {
+  align-self: stretch;
+  height: 3px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.line-successful-2-wrapper {
+  width: 249px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4px 0 0;
+  box-sizing: border-box;
+}
+.tittle-successful {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 31px;
+  max-width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+.bluzenkopng-icon,
+.karamelkapng-icon,
+.nash-kraipng-icon,
+.obgorapng-icon,
+.torbapng-icon,
+.varuspng-icon {
+  align-self: stretch;
+  max-height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: fill;
+  max-width: 160px;
+  min-height: 58px;
+}
+.nash-kraipng-icon {
+  width: 160px;
+  position: relative;
+}
+.bluzenkopng-icon,
+.karamelkapng-icon,
+.obgorapng-icon,
+.torbapng-icon,
+.varuspng-icon {
+  width: 160px;
+  
+}
+.bluzenkopng-icon,
+.karamelkapng-icon,
+.obgorapng-icon,
+.torbapng-icon {
+  position: relative;
+}
+.successful-container,
+.icon-partners-buisnes {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.icon-partners-buisnes {
+  align-self: stretch;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 5px 0 0;
+  gap: 0 30px;
+  opacity: 0;
+  max-width: 100%;
+}
+.icon-partners-buisnes.animate {
+  animation: 1s ease-in-out 1s 1 normal forwards slide-in-top;
+}
+.successful-container {
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0;
+  max-width: 1270px;
+}
+.successful,
+.successful-frame {
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.successful-frame {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 0 0 6px;
+  max-width: 100%;
+}
+.successful {
+  width: 100%;
+  position: relative;
+  background-color: #3a3c99;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 26px 69px 20px;
+  gap: 25px 0;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 1200px) {
+  .successful-container {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .tittle-successful {
+    gap: 0 31px;
+  }
+  .icon-partners-buisnes {
+    gap: 0 40.6px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .div {
+    font-size: 32px;
+  }
+  .line-successful-icon,
+  .line-successful-2{
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .div {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .div{
+    font-size: 24px;
+    text-align: center;
+  }
+  
+}
+/* footer */
+
+/* footer */
+.footer {
+  background-image: url(./IMG/fon-blue.png);
+  background-size: cover;
+  color: white;
+  padding: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  
+  overflow: hidden;
+  
+}
+.footer-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+.icon-location{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0;
+  margin-top: 0px;
+  gap: 25px;
+}
+.location{
+  width: 30px;
+  height: 35px;
+  justify-content: flex-start;
+  left: 200px;
+  stroke: white;
+}
+
+.footer-text{
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif;;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text p {
+  width: 300px;
+  font-size: 18px; /* Зміна розміру шрифту для інших параграфів */
+  margin: 0; /* Зміна відстані між параграфами на мінімальне значення (ви можете налаштувати як вам потрібно) */
+}
+.phone{
+  width: 30px;
+  height: 35px;
+  justify-content: flex-start;
+  left: 200px;
+  stroke: white;
+}
+
+.footer-logo {
+  display: flex; /* Встановлюємо flex-контейнер для дочірніх елементів */
+  width: 270px;
+  height: 130px;
+  cursor: pointer;
+  margin: 0 50px; /* Автоматичний відступ з обох боків для центрування */
+}
+
+
+.footer-logo .inner-container {
+  width: 250px;
+  height: 109px;
+  
+}
+.tittle-social {
+  font-size: 24px;
+  font-family: "Roboto Condensed", sans-serif;;
+}
+
+.icon-link{
+ 
+ margin-left: 10%;
+}
+.icon-social{
+  width: 200px;
+  height: 60px;
+}
+.icon-social img[src$="instagram icon.png"] {
+  width: 45px; 
+  height: 45px; 
+}
+.icon-social img[src$="FB icon.png"] {
+  width: 45px; 
+  height: 45px; 
+}
+
+
+
+@media screen and (max-width: 1260px) {
+  .footer-logo{
+    margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .footer-text{
+    font-size: 16px;
+  }
+  .location{
+    width: 25px;
+    height: 30px;
+  }
+  .phone{
+    width: 25px;
+    height: 30px;
+  }
+  .icon-location{
+    gap: 33px;
+  }
+  .tittle-social{
+    font-size: 20px;
+  }
+  .icon-link{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .footer-text{
+    font-size: 16px;
+  }
+  .location{
+    width: 25px;
+    height: 30px;
+  }
+  .phone{
+    width: 25px;
+    height: 30px;
+  }
+  .icon-location{
+    gap: 33px;
+  }
+  .tittle-social{
+    font-size: 20px;
+  }
+  .icon-link{
+    width: 30px;
+    height: 30px;
+  }
+  .icon-social img[src$="instagram.png"],
+  .icon-social img[src$="facebook.png"]{
+      width: 40px;
+      height: 40px;
+  }
+
+}
+
+@media screen and (max-width: 860px) {
+  
+  .namecompany,
+  .footer-text p{
+    font-size: 14px;
+  }
+  .location{
+    width: 20px;
+    height: 25px;
+  }
+  .phone{
+    width: 20px;
+    height: 25px;
+  }
+  .icon-location{
+    gap: 25px;
+  }
+  .tittle-social{
+    font-size: 18px;
+    margin:  0 15px;
+  }
+  .icon-link{
+    width: 10px;
+    height: 30px;
+  }
+  .footer-logo{
+    margin: 0 15px;
+    width: 200px;
+  }
+  .footer-logo-centr{
+    width: 200px;
+    height: 130px;
+  }
+  .footer-text{
+    width: 250px;
+  }
+  .footer-content{
+    gap: 10px;
+  }
+  .footer-social{
+    width: 200px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 760px){
+  .footer-logo-centr{
+      width: 150px;
+      height: 100px;
+    }
+  .footer-logo{
+      margin: 0 15px;
+      width: 150px;
+    }  
+}
+@media screen and (max-width: 700px){
+  .footer-logo-centr{
+      width: 150px;
+      height: 100px;
+    }
+  .footer-logo{
+      margin: 0 15px;
+      width: 150px;
+    } 
+  .footer-text{
+      font-size: 14px;
+      width: 200px;
+  }   
+  
+}
+@media screen and (max-width: 640px){
+  .footer-logo-centr{
+      display: none;
+  }
+}
+@media screen and (max-width: 580px) {
+  .footer-content{
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .icon-location{
+    display: none;
+  }
+  .footer-text{
+    width: 200px;
+  }
+  .footer-logo-centr{
+      display: block;
+      width: 200px;
+      height: 130px;
+    }
+  .footer-logo{
+      margin: 0 15px;
+      width: 200px;
+    }    
+}

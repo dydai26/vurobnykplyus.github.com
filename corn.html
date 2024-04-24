@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corn</title>
+
+    <link rel="stylesheet" href="corn .css">
+    
+    <script src="script.js" ></script>
+
+    <link rel="icon" type="image/x-icon" href="./IMG/logo-sk-new2022132-2@2x.png">
+    
+  
+    
+
+   
+   
+   
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.min.js"></script>
+  
+
+
+</head>
+
+
+<body>
+    <!-- банер -->
+    <div id="bannerCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <img src="./IMG/baner 2.png" class="d-block w-100" alt="first img">
+            </div>
+            <div class="carousel-item">
+                <img src="./IMG/baner 2.png" class="d-block w-100" alt="second img">
+            </div>
+            <div class="carousel-item">
+                <img src="./IMG/baner 2.png" class="d-block w-100" alt="second img">
+            </div>
+            <div class="popup-baner">
+                <div class="popup-content-baner">
+                    Золотий стандарт смаку: Кукурудзяне печиво від ТМ "SOYUZ KONDITER" 
+                    - смак, який завоював серця справжніх гурманів. 
+                    Дозвольте собі насолодитися кожною крихтою вишуканої істинної якості!
+                </div>
+                <img class="popup-img" src="./IMG/Гасло.png">
+            </div>
+                </div>
+            <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Попередній</span>
+            </a>
+            <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Наступний</span>
+            </a>
+    </div>
+    </div>
+</div>
+
+<!-- навігація -->
+<header>
+    <div id=header class="main-header">
+        <div class="logo-container">
+            <a href="index.html">
+            <img class="ImgLogo" src="./IMG/logo-navi@2x.png" alt="Logo">
+        </a>
+            <div class="menu">
+                <div class="menu-item" id="about_header">
+                    <a href="index.html">Головна</a></div>
+                    <div class="menu-item" id="news_header">
+                        <a href="news.html">Новини</a></div>
+                            <div class="menu-item" id="contact_header">
+                            <a href="page-contakt.html">Контакти</a></div>
+                            <div class="menu-item" id="product-link">Продукція</div>
+                              
+                              <div class="popup-header" id="popup-header">
+                                <a href="page-catalog.html" id="product-link">
+                                <p>SOUYZ KONDITER</p>
+                              </a>
+                                <p>TM TASMAN</p>
+                            </div>
+                            <div class="languageTogglefalguk" onclick="changeLanguage('uk')">
+                                <span class="txt111">UA</span>
+                            </div>
+                            <div class="languageToggleflagen2" onclick="changeLanguage('en')">
+                                <span class="txt111">EU</span>
+                            </div>
+            </div>
+        </header>
+        <header id="sticky-header" class="hidden">
+            <div class="logo-container">
+              <a href="index.html">
+                <img class="ImgLogo-2" src="./IMG/LOGO SK NEW-2022+.png" alt="Logo">
+              </a>
+                <div class="menu">
+                    <div class="menu-item2" id="about2">
+                      <a href="index.html">Головна</a></div>
+                        <div  class="menu-item2" id="news2">
+                        <a href="news.html">Новини</a></div>
+                            
+                            <div class="menu-item2" id="products2">
+                              <a href="page-catalog.html">Продукція</a></div>
+                                <div class="menu-item2" id="contact2">
+                                  <a href="page-contakt.html">Контакти</a></div>
+        
+                                  <div class="languageTogglefalguk" onclick="changeLanguage('uk')">
+                                    <span class="txt112">UA</span>
+                                </div>
+                                <div class="languageToggleflagen2" onclick="changeLanguage('en')">
+                                    <span class="txt112">EU</span>
+                                </div>
+                </div>
+            </header>
+ <!-- меню гамбургер -->
+ <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="about-us.html" id="about_ham">Про нас</a></li>
+        <li><a href="news.html" id="news_ham">Новини</a></li>
+        <li><a href="page-contakt.html" id="contakt_ham">Контакти</a></li>
+        <li><a href="page-catalog.html" id="product_ham">Продукція</a></li>
+        
+      </ul>
+      <div class="socia-icon-header">
+          <img class="socia-icon2" src="./IMG/FB icon.png">
+          <img class="socia-icon2" src="./IMG/instagram icon.png">
+        </div>
+    </nav>
+  </div>
+      <div class="header-container">
+          <div class="header-content">
+            <div class="hamburger-icon"  id="hamburger-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <div class="logo-container">
+              <a href="index.html">
+              <img class="ImgLogo2" src="./IMG/logo-navi@2x.png" alt="Logo">
+              </a>
+            </div>
+            <div class="languege">
+              <h3 class="languege-item" onclick="changeLanguage('uk')">UA</h3>
+              <h3 class="languege-item" onclick="changeLanguage('en')">EU</h3>
+            </div>
+            </div>
+            
+          </div>
+        </div>
+
+<!-- блок каталог -->
+<div class="Corn-block">
+
+    <div class="Tittle-list-Corn">
+        <div class="catalog-line-Corn">
+            <div class="Corn-frame-set">
+                <img class="line-catalog-1" loading="lazy" alt="" src="./IMG/Line синя 1.png" />
+            </div>
+            <div class="catalog-parent-frame">
+                <h1 class="tittle-catalog">Кукурудзяне печиво</h1>
+            </div>
+            <div class="Corn-frame-set1">
+                <img class="line-catalog-2" loading="lazy" alt="" src="./IMG/Line синя 2.png" />
+            </div>
+        </div>
+    </div>
+    <div class="img-container" id="img-container">
+        <div class="Overlay-img1" data-animate-on-scroll onclick="openModal(this.src)">
+            <img class="img-1" src="./IMG/кук-пнг.png">
+            <div class="hover-image">
+            </div>
+            <img class="img-icon1" src="./IMG/button white.png" alt="img-icon" onclick="openModal(this.src)">
+            <span id="oatmealcookies" class="button-text" onclick="openModal(this.src)">КУКУРУДЗЯНЕ</span>   
+        </div>
+  
+    
+   
+        <div id="myModal" class="modal" onclick="closeModal()">
+            <div class="modal-content"> 
+                <div class="modal-image-container"> <!-- Зображення з текстом -->
+                    <img id="modal-img" class="modal-img" src="./IMG/Кук титул.jpg">
+                    <div class="overlay-text">
+                        <div class="tittle-txt">"КУКУРУДЗЯНЕ ПЕЧИВО"</div>
+                        <p> 
+                            Легке та сонячне печиво з додаванням кукурудзяного борошна, 
+                            що не містить глютену, не тільки приносить задоволення, 
+                            але й збагачує нас найкориснішими вітамінами!
+                        </p>
+                        <hr class="line">
+                        <p>
+                            Термін придатності: 180 днів
+                        </p>
+                        
+                        <p>
+                            Вага нетто: 2.7 кг.
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="Overlay-img2" data-animate-on-scroll onclick="openModal2(this.src)">
+            <img class="img-2" src="./IMG/кукфас-пнг.png">
+            <div class="hover-image2">
+            </div>
+            <img class="img-icon2" src="./IMG/button white.png" alt="img-icon" onclick="openModal2(this.src)">
+            <span id="oatmealcookies" class="button-text2" onclick="openModal2(this.src)">КУКУРУДЗЯНЕ ФАСОВАНЕ</span>
+        </div>
+        <div id="myModal2" class="modal" onclick="closeModal2()">
+            <div class="modal-content"> 
+                <div class="modal-image-container">
+                    <img id="modal-img2" class="modal-img" src="./IMG/Кук фас.jpg">
+                    <div class="overlay-text">
+                        <div class="tittle-txt">"ПЕЧИВО КУКУРУДЗЯНЕ ФАСОВАНЕ"</div>
+                        <p> 
+                            Легке та сонячне печиво з додаванням кукурудзяного борошна, 
+                            що не містить глютену, не тільки приносить задоволення, 
+                            але й збагачує нас найкориснішими вітамінами!
+                        </p>
+                        <hr class="line">
+                        <p>
+                            Термін придатності: 180 днів
+                        </p>
+                        
+                        <p>
+                            Вага нетто: 0,4 кг*10 шт., 4 кг., 0,125*20 шт. 2,5 кг
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Overlay-img3" data-animate-on-scroll onclick="openModal3(this.src)">
+            <img class="img-2" src="./IMG/кук-пнг.png">
+            <div class="hover-image3">
+            </div>
+            <img class="img-icon3" src="./IMG/button white.png" alt="img-icon" onclick="openModal3(this.src)">
+            <span id="oatmealcookies" class="button-text2" onclick="openModal3(this.src)">КУКУРУДЗЯНЕ ПРЕМІУМ</span>
+        </div>
+        <div id="myModal3" class="modal" onclick="closeModal3()">
+            <div class="modal-content"> 
+                <div class="modal-image-container">
+                    <img id="modal-img" class="modal-img" src="./IMG/кук-преміум пнг - тимчасово.png">
+                    <div class="overlay-text">
+                        <div class="tittle-txt">КУКУРУДЗЯНЕ ПРЕМІУМ</div>
+                        <p></p>
+                            Шматочки натурального шоколаду доповнюють 
+                            тонкий смак ніжного кукурудзяного печива – незмінного супутника приємних чаювань!
+                        </p>
+                        <hr class="line">
+                        <p>
+                            Термін придатності: 180 днів
+                        </p>
+                    
+                        <p>
+                            Вага нетто: 2,8 кг
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-corn">
+            <div class="Overlay-corn">
+              <a  href="page-catalog.html">
+                <img class="button-corn-icon2" src="./IMG/button white.png" alt="img-icon">
+                <span class="txt-button-corn">Повернутись назад</span>
+            </a>
+        </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+        <div class="footer-content">
+            <div class="icon-location">
+                    <img class="location" src="./IMG/Icon-Set.png">
+                    <img class="phone" src="./IMG/phone.png">
+                </div>
+                <div class="footer-text">
+                    <p id="namecompany"> "ТОВ "ВИРОБНИК ПЛЮС"</p>
+                    <p id="address">вул. Черкасова 31, м. Кривий ріг</p>
+                    <p id="region">Дніпропетровська обл., 30079</p>  
+                    <p id="contactnumber">+38 (067) 543 69 71</p>
+                </div>
+                <div class="footer-logo">
+                <img class="footer-logo-centr" src="./IMG/logo-navi@2x.png">
+                </div>
+                <div class="footer-social">
+                    <div class="social-icons">
+                        <div class="tittle-social">
+                            <p id="socialnetwork">Соціальні мережі</p>
+                        </div>
+                        <div class="icon-social">
+                        <a href="https://www.facebook.com/SoyuzKonditer" class="icon-link"><img src="./IMG/FB icon.png" alt="Facebook icon"></a>
+                        <a href="https://www.instagram.com/vyrobnykplyus" class="icon-link"><img src="./IMG/instagram icon.png" alt="Instagram icon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</footer>            
+
+<script>
+// бургер
+const hamburgerIcon = document.querySelector('.hamburger-icon');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+hamburgerIcon.addEventListener('click', () => {
+  if (mobileMenu.style.display === 'block') {
+    mobileMenu.style.display = 'none';
+  } else {
+    mobileMenu.style.display = 'block';
+  }
+});
+
+// Додамо обробку кліку за межами вікна меню для його закриття
+document.addEventListener('click', (event) => {
+  const target = event.target;
+  const isHamburgerIcon = target.classList.contains('hamburger-icon');
+
+  if (!isHamburgerIcon && mobileMenu.style.display === 'block') {
+    mobileMenu.style.display = 'block';
+  }
+});
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth <= 900) {
+    document.getElementById('header').style.display = 'none';
+  } else {
+    document.getElementById('header').style.display = 'block';
+  }
+});
+
+// Викликемо подію resize один раз при завантаженні сторінки для визначення відразу відображення елементу
+window.dispatchEvent(new Event('resize'));
+
+
+
+// АНІМАЦІЯ СКРОЛ
+
+var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+var observer = new IntersectionObserver(
+ (entries) => {
+     for (const entry of entries) {
+         if (entry.isIntersecting || entry.intersectionRatio > 0) {
+             const targetElement = entry.target;
+             targetElement.classList.add("animate");
+             observer.unobserve(targetElement);
+         }
+     }
+ },
+ {
+     threshold: 0.15,
+ }
+);
+
+for (let i = 0; i < scrollAnimElements.length; i++) {
+ observer.observe(scrollAnimElements[i]);
+}
+
+
+
+// модульне вікно1
+function openModal(imgSrc) {
+ var modal = document.getElementById('myModal');
+ var modalImg = document.getElementById('modal-img2');
+ modal.style.display = 'flex';
+
+}
+
+// Закриття модального вікна
+function closeModal() {
+var modal = document.getElementById('myModal');
+modal.style.display = 'none';
+} 
+
+ // модульне вікно2
+ function openModal2(imgSrc) {
+ var modal = document.getElementById('myModal2');
+ var modalImg = document.getElementById('modal-img2');
+ modal.style.display = 'flex';
+
+}
+
+// Закриття модального вікна2
+function closeModal2() {
+var modal = document.getElementById('myModal2');
+modal.style.display = 'none';
+} 
+// модульне вікно3
+function openModal3(imgSrc) {
+ var modal = document.getElementById('myModal3');
+ var modalImg = document.getElementById('modal-img2');
+ modal.style.display = 'flex';
+
+}
+
+// Закриття модального вікна3
+function closeModal3() {
+var modal = document.getElementById('myModal3');
+modal.style.display = 'none';
+} 
+
+// Отримуємо посилання на елемент продукції
+const productLink = document.getElementById('product-link');
+
+// Отримуємо посилання на попап хедер
+const popupHeader = document.getElementById('popup-header');
+
+// Додаємо обробник події кліку на елемент продукції
+productLink.addEventListener('click', function() {
+    // Перевіряємо, чи попап хедер відображається
+    if (popupHeader.style.display === 'block') {
+        // Якщо відображається, то закриваємо
+        popupHeader.style.display = 'none';
+    } else {
+        // Інакше відкриваємо
+        popupHeader.style.display = 'block';
+    }
+});
+</script>
+
+</body>
+</html>     

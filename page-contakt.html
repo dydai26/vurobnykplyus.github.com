@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contakt</title>
+    <link rel="stylesheet" href="style-page-contakt.css" />
+    <script src="script.js" ></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+    
+          
+          <div id="bannerCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                   <img src="./IMG/Конт1.jpg" class="d-block w-100" alt="first img">
+               </div> 
+        <div class="carousel-item">
+             <img src="./IMG/конт2.jpg" class="d-block w-100" alt="second img">
+        </div>
+        <div class="carousel-item">
+            <img src="./IMG/Прод3.jpg" class="d-block w-100" alt="second img">
+       </div>
+       <div class="popup-baner">
+        <div class="popup-content-baner">
+          Зв'яжіться з нами: Отримайте інформацію про нашу продукцію 
+          та послуги та спілкуйтеся з нами зручним для вас способом - 
+          ми завжди раді почути вас! 
+        </div>
+        <img class="popup-img" src="./IMG/Гасло.png">
+    </div>
+        </div>
+        <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Попередній</span>
+        </a>
+        <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Наступний</span>
+        </a>
+    </div>
+        </div>
+      </div>
+  
+<header>
+        <div id=header class="main-header">
+            <div class="logo-container">
+              <a href="index.html">
+                <img class="ImgLogo" src="./IMG/logo-navi@2x.png" alt="Logo">
+              </a>
+                <div class="menu">
+                  <div class="menu-item" id="about_header">
+                    <a href="index.html">Головна</a></div>
+                    <div class="menu-item" id="news_header">
+                        <a href="about-us.html">Про нас</a></div>
+                            <div class="menu-item" id="contact_header">
+                            <a href="news.html">Новини</a></div>
+                            <div class="menu-item" id="product-link">Продукція</div>
+                              
+                              <div class="popup-header" id="popup-header">
+                                <a href="page-catalog.html" id="product-link">
+                                <p>SOUYZ KONDITER</p>
+                              </a>
+                                <p>TM TASMAN</p>
+                            </div>
+                                <div class="languageTogglefalguk" onclick="changeLanguage('uk')">
+                                  <span class="txt111">UA</span>
+                              </div>
+                              <div class="languageToggleflagen2" onclick="changeLanguage('en')">
+                                  <span class="txt111">EU</span>
+                              </div>
+                </div>
+            </header>
+
+            <header id="sticky-header" class="hidden">
+              <div class="logo-container">
+                <a href="index.html">
+                  <img class="ImgLogo-2" src="./IMG/LOGO SK NEW-2022+.png" alt="Logo">
+                </a>
+                  <div class="menu">
+                      <div class="menu-item2" id="">
+                        <a href="index.html">Головна</a></div>
+                          <div  class="menu-item2" id="">
+                          <a href="about-us.html">Про нас </a></div>
+                              
+                              <div class="menu-item2" id="products2">
+                                <a href="page-catalog.html">Продукція</a></div>
+                                  <div class="menu-item2" id="">
+                                    <a href="news.html">Новини</a></div>
+          
+                                    <div class="languageTogglefalguk" onclick="changeLanguage('uk')">
+                                      <span class="txt112">UA</span>
+                                  </div>
+                                  <div class="languageToggleflagen2" onclick="changeLanguage('en')">
+                                      <span class="txt112">EU</span>
+                                  </div>
+                  </div>
+              </header>
+
+    <!-- меню гамбургер -->
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="about-us.html" id="about_ham">Про нас</a></li>
+          <li><a href="news.html" id="news_ham">Новини</a></li>
+          <li><a href="page-contakt.html" id="contakt_ham">Контакти</a></li>
+          <li><a href="page-catalog.html" id="product_ham">Продукція</a></li>
+          
+        </ul>
+        <div class="socia-icon-header">
+            <img class="socia-icon2" src="./IMG/FB icon.png">
+            <img class="socia-icon2" src="./IMG/instagram icon.png">
+          </div>
+      </nav>
+    </div>
+        <div class="header-container">
+            <div class="header-content">
+              <div class="hamburger-icon"  id="hamburger-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <div class="logo-container">
+                <a href="index.html">
+                <img class="ImgLogo2" src="./IMG/logo-navi@2x.png" alt="Logo">
+                </a>
+              </div>
+              <div class="languege">
+                <h3 class="languege-item" onclick="changeLanguage('uk')">UA</h3>
+                <h3 class="languege-item" onclick="changeLanguage('en')">EU</h3>
+              </div>
+              </div>
+              
+            </div>
+          </div>          
+
+    <!-- телефони -->
+        <div class="Catalog-block">
+                <div class="Catalog">
+                    <div class="Tittle-list-frame">
+                          <div class="catalog-line-frame">
+                            <div class="catalog-frame-set">
+                              <img class="line-catalog-1" loading="lazy" alt="" src="./IMG/line-2x.png" />
+                            </div>
+                            <div class="catalog-parent-frame">
+                              <h1 class="tittle-catalog">Контакти</h1>
+                            </div>
+                            <div class="catalog-frame-set1">
+                              <img class="line-catalog-2" loading="lazy" alt="" src="./IMG/line-2x.png" />
+                            </div>
+                          </div>
+                        </div>
+                
+                <div class="list-contakt">
+                
+                    <div class="list1">
+                        <div class="tittle-list1">
+                            <h3 class="tittle-list-name">Офіс менеджер</h3>
+                            <h3 class="number1">+38067 543 69 71 </h3>
+                            <h3 class="mail">vurobnykplus@gmail.com</h3>
+                        </div>
+                    </div>
+                
+                    <div class="list1">
+                        <h3 class="tittle-list-name">Відділ контролю якості:</h3>
+                        <h3 class="number1">+38067 543 69 71 </h3>
+                        <h3 class="mail">vp-laboratoria@ukr.net</h3>
+                    </div>
+                
+                    <div class="list1">
+                        <h3 class="tittle-list-name">Відділ персоналу:</h3>
+                        <h3 class="number1">+38067 543 69 71   </h3>
+                        <h3 class="mail">vurobnykplus@gmail.com</h3>
+                    </div>
+                
+                
+                    <div class="list1">
+                        <h3 class="tittle-list-name"> Керівник відділу ЗЕД (експорт, мережі):  </h3>
+                        <h3 class="number1">+38096 045 30 43 </h3>
+                        <h3 class="mail">ksenyya.savchuk@gmail.com</h3>
+                    </div>
+                
+                    <div class="list1">
+                        <h3 class="tittle-list-name">Керівник відділу продажів Україна: </h3>
+                        <h3 class="number1">+380679281442 </h3>
+                        <h3 class="mail">skovron.a.g@gmail.com</h3>
+                    </div>
+                
+                    <div class="list1">
+                        <h3 class="tittle-list-name">Керівник відділу продажів Кривий Ріг:</h3>
+                        <h3 class="number1">+38067 631 11 56 </h3>
+                        <h3 class="mail"> sedovsv7004@gmail.com</h3>
+                    </div>
+                    <div class="list1">
+                      <h3 class="tittle-list-name">Керівник відділу закупівель сировини: </h3>
+                      <h3 class="number1">+38067 558 33 65 </h3>
+                      <h3 class="mail"> maksimvlasenko7@gmail.com</h3>
+                  </div>
+                  <div class="list1">
+                    <h3 class="tittle-list-name">Відділ бухгалтерії: </h3>
+                    <h3 class="number1">+38067 543 69 71 </h3>
+                    <h3 class="mail"> vurobnykplus@gmail.com</h3>
+                </div>
+                </div>
+                </div>
+        </div>
+      <!-- карта -->
+    <div class="container-maps">
+        <div class="maps-parens">
+          <img class="png" src="./IMG/IMG_2375.png"></img>
+          <img class="png2" src="./IMG/IMG_2375.png"></img>
+            <iframe class="gps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14789.254297084317!2d33.39210427640636!3d47.90580052618347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dcad2c798aa891%3A0x615ff8f7c18a25d1!2s31%2C%20Cherkasova%20St%2C%20Kryvyi%20Rih%2C%20Dnipropetrovs%27ka%20oblast%2C%2050110!5e0!3m2!1sen!2sua!4v1647392244951!5m2!1sen!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+          </div>
+          
+    </div> 
+    <!-- вакансії -->
+    <div class="job-block">
+        <div class="job-container">
+            <div class="Tittle-list-frame">
+                  <div class="catalog-line-frame">
+                    <div class="catalog-frame-set">
+                      <img class="line-catalog-1" loading="lazy" alt="" src="./IMG/line-2x.png" />
+                    </div>
+                    <div class="catalog-parent-frame">
+                      <h1 class="tittle-catalog">Вакансії</h1>
+                    </div>
+                    <div class="catalog-frame-set1">
+                      <img class="line-catalog-2" loading="lazy" alt="" src="./IMG/line-2x.png" />
+                    </div>
+                  </div>
+                </div> 
+        <div class="vacancy">
+            <div class="vacancy-image">
+                
+                <img class="img-vacancy" src="./img/IMG_8758.jpg">
+                <div class="vacancy-list">
+                    <h1 class="vacancy-tittle">Перелік вакансій :</h1>
+                    <ul>
+                        <li>Водій;</li>
+                        <li>Кондитер;</li>
+                        <li>Охоронець;</li>
+                        <li>Експедитор;</li>
+                        <li>Склад;</li>
+                    </ul>
+                
+                </div>
+                <div class="list2">
+                    <h3 class="tittle-list-name2">Офіс менеджер</h3>
+                    <h3 class="number2">+38067 543 69 71 </h3>
+                    <h3 class="mail2">vurobnykplus@gmail.com</h3>
+                    </div>
+                    </div>
+
+                    <div class="job-forms">
+                        <div class="form-job">
+                            <h1 class="vacancy-tittle2">Відправити резюме :</h1>
+                      </div>  
+                      <div class="form-imput">
+                        <div class="form-container">
+                            <form id="resumeForm" action="/submit_resume" method="post" enctype="multipart/form-data">
+                              <label for="name">Ім'я:</label><br>
+                              <input type="text" id="name" name="name" required><br>
+                              <label for="surname">Прізвище:</label><br>
+                              <input type="text" id="surname" name="surname" required><br>
+                              <label for="email">Емейл:</label><br>
+                              <input type="email" id="email" name="email" required><br>
+                              <label for="resume">Вкласти файл:</label><br>
+                              <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+                              <input type="submit" value="Відправити">
+                            </form>
+                          </div>
+                          
+                      </div>
+                </div>
+            </div>
+        </div>  
+      
+</div>
+<!-- футер -->
+<footer class="footer">
+  <div class="footer-content">
+      <div class="icon-location">
+          <img class="location" src="./IMG/Icon-Set.png">
+          <img class="phone" src="./IMG/phone.png">
+      </div>
+      <div class="footer-text">
+          <p id="namecompany"> "ТОВ "ВИРОБНИК ПЛЮС"</p>
+          <p id="address">вул. Черкасова 31, м. Кривий ріг</p>
+          <p id="region">Дніпропетровська обл., 30079</p>  
+          <p id="contactnumber">+38 (067) 543 69 71</p>
+      </div>
+      <div class="footer-logo">
+      <img class="footer-logo-centr" src="./IMG/logo-navi@2x.png">
+      </div>
+      <div class="footer-social">
+          <div class="social-icons">
+              <div class="tittle-social">
+                  <p id="socialnetwork">Соціальні мережі</p>
+              </div>
+              <div class="icon-social">
+              <a href="https://www.facebook.com/SoyuzKonditer" class="icon-link"><img src="./IMG/FB icon.png" alt="Facebook icon"></a>
+              <a href="https://www.instagram.com/vyrobnykplyus" class="icon-link"><img src="./IMG/instagram icon.png" alt="Instagram icon"></a>
+          </div>
+          </div>
+      </div>
+  </div>
+</footer>     
+
+<script>
+// Отримуємо посилання на елемент продукції
+const productLink = document.getElementById('product-link');
+
+// Отримуємо посилання на попап хедер
+const popupHeader = document.getElementById('popup-header');
+
+// Додаємо обробник події кліку на елемент продукції
+productLink.addEventListener('click', function() {
+    // Перевіряємо, чи попап хедер відображається
+    if (popupHeader.style.display === 'block') {
+        // Якщо відображається, то закриваємо
+        popupHeader.style.display = 'none';
+    } else {
+        // Інакше відкриваємо
+        popupHeader.style.display = 'block';
+    }
+});
+
+// бургер
+const hamburgerIcon = document.querySelector('.hamburger-icon');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+hamburgerIcon.addEventListener('click', () => {
+  if (mobileMenu.style.display === 'block') {
+    mobileMenu.style.display = 'none';
+  } else {
+    mobileMenu.style.display = 'block';
+  }
+});
+
+// Додамо обробку кліку за межами вікна меню для його закриття
+document.addEventListener('click', (event) => {
+  const target = event.target;
+  const isHamburgerIcon = target.classList.contains('hamburger-icon');
+
+  if (!isHamburgerIcon && mobileMenu.style.display === 'block') {
+    mobileMenu.style.display = 'block';
+  }
+});
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth <= 900) {
+    document.getElementById('header').style.display = 'none';
+  } else {
+    document.getElementById('header').style.display = 'block';
+  }
+});
+
+// Викликемо подію resize один раз при завантаженні сторінки для визначення відразу відображення елементу
+window.dispatchEvent(new Event('resize'));
+
+ 
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("resumeForm");
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    var formData = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/submit_resume", true);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        alert("Резюме успішно відправлено!");
+      } else {
+        alert("Помилка при відправленні резюме. Будь ласка, спробуйте ще раз.");
+      }
+    };
+    xhr.send(formData);
+  });
+});
+
+
+const express = require('express');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+
+const app = express();
+const port = 5500;
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.post('/page-contakt', (req, res) => {
+  // Отримати дані форми з запиту
+  const { name, surname, email } = req.body;
+  const resumeFile = req.files.resume;
+
+  // Надіслати резюме на електронну адресу
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'dyda@gmail.com',
+      pass: 'dydai1987'
+    }
+  });
+
+  const mailOptions = {
+    from: 'your_email@gmail.com',
+    to: 'dyda@gmail.com',
+    subject: 'Нове резюме',
+    text: `Ім'я: ${name}\nПрізвище: ${surname}\nЕмейл: ${email}`,
+    attachments: [
+      {
+        filename: resumeFile.name,
+        content: resumeFile.data
+      }
+    ]
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log(error);
+      res.status(500).send('Помилка при відправленні резюме');
+    } else {
+      console.log('Email sent: ' + info.response);
+      res.status(200).send('Резюме успішно відправлено');
+    }
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Сервер запущено на порті ${port}`);
+});
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+                
+</html>

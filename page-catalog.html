@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<body lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Catalog" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+
+    <link rel="stylesheet" href="page-catalog.css">
+
+    <script src="script.js" ></script>
+
+    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.min.js"></script>
+    
+
+</head>
+
+<body>
+
+    <!-- банер -->
+    <div id="bannerCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="./IMG/Прод1.jpg" class="d-block w-100" alt="first img">
+           </div> 
+    <div class="carousel-item">
+         <img src="./IMG/Прод2.jpg" class="d-block w-100" alt="second img">
+    </div>
+    <div class="carousel-item">
+        <img src="./IMG/Прод3.jpg" class="d-block w-100" alt="second img">
+   </div>
+   <div class="popup-baner">
+    <div class="popup-content-baner">
+      Дізнайтеся більше про нашу різноманітну продукцію: 
+      від ніжних тортів до хрустких сухарів - смак, який вас вразить!
+       Відкрийте для себе безмежний світ нашої продукції. 
+    </div>
+    <img class="popup-img" src="./IMG/Гасло.png">
+</div>
+    </div>
+    <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Попередній</span>
+    </a>
+    <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Наступний</span>
+    </a>
+</div>
+    </div>
+  </div>
+<!-- навігація -->
+<header>
+    <div id=header class="main-header">
+        <div class="logo-container">
+          <a href="index.html">
+            <img class="ImgLogo" src="./IMG/logo-navi@2x.png" alt="Logo">
+          </a>
+            <div class="menu">
+              <div class="menu-item" id="about">
+                <a href="index.html">Головна</a></div>
+                <div  class="menu-item" id="news">
+                    <a href="about-us.html">Про нас </a></div>
+                    <div class="menu-item" id="products">
+                    <a href="page-contakt.html">Контакти</a></div>
+                        <div class="menu-item" id="contact">
+                        <a href="news.html">Новини</a></div>
+                            <div class="languageTogglefalguk" onclick="changeLanguage('uk')">
+                              <span class="txt111">UA</span>
+                          </div>
+                          <div class="languageToggleflagen2" onclick="changeLanguage('en')">
+                              <span class="txt111">EU</span>
+                          </div>
+            </div>
+        </header>
+
+<!-- другий хедер -->
+<header id="sticky-header" class="hidden">
+            <div class="logo-container">
+              <a href="index.html">
+                <img class="ImgLogo-2" src="./IMG/LOGO SK NEW-2022+.png" alt="Logo">
+              </a>
+                <div class="menu">
+                    <div class="menu-item2" id="about2">
+                      <a href="index.html">Головна</a></div>
+                        <div  class="menu-item2" id="news2">
+                        <a href="about-us.html">Про нас</a></div>
+                            
+                            <div class="menu-item2" id="products2">
+                              <a href="page-contakt.html">Контакти</a></div>
+                                <div class="menu-item2" id="contact2">
+                                  <a href="news.html">Новини</a></div>
+        
+                                  <div class="languageTogglefalguk" onclick="changeLanguage('uk')">
+                                    <span class="txt112">UA</span>
+                                </div>
+                                <div class="languageToggleflagen2" onclick="changeLanguage('en')">
+                                    <span class="txt112">EU</span>
+                                </div>
+                </div>
+                </div>
+            </header>
+<!-- меню гамбургер -->
+            <div class="mobile-menu" id="mobile-menu">
+              <nav class="mobile-nav">
+                <ul>
+                  <li><a href="about-us.html" id="about_ham">Про нас</a></li>
+                  <li><a href="news.html" id="news_ham">Новини</a></li>
+                  <li><a href="page-contakt.html" id="contakt_ham">Контакти</a></li>
+                  <li><a href="page-catalog.html" id="product_ham">Продукція</a></li>
+                  
+                </ul>
+                <div class="socia-icon-header">
+                    <img class="socia-icon2" src="./IMG/FB icon.png">
+                    <img class="socia-icon2" src="./IMG/instagram icon.png">
+                  </div>
+              </nav>
+            </div>
+                <div class="header-container">
+                    <div class="header-content">
+                      <div class="hamburger-icon"  id="hamburger-icon">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                      </div>
+                      <div class="logo-container">
+                        <a href="index.html">
+                        <img class="ImgLogo2" src="./IMG/logo-navi@2x.png" alt="Logo">
+                        </a>
+                      </div>
+                      <div class="languege">
+                        <h3 class="languege-item" onclick="changeLanguage('uk')">UA</h3>
+                        <h3 class="languege-item" onclick="changeLanguage('en')">EU</h3>
+                      </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+            
+<!-- блок каталог -->
+<div class="Catalog-block">
+   
+        <div class="Tittle-list-frame">
+              <div class="catalog-line-frame">
+                <div class="catalog-frame-set">
+                  <img class="line-catalog-1" loading="lazy" alt="" src="./IMG/Line синя 1.png" />
+                </div>
+                <div class="catalog-parent-frame">
+                  <h1 class="tittle-catalog">Каталог</h1>
+                </div>
+                <div class="catalog-frame-set1">
+                  <img class="line-catalog-2" loading="lazy" alt="" src="./IMG/Line синя 2.png" />
+                </div>
+              </div>
+            </div>
+            
+          <div class="img-container">
+            <div class="Overlay" data-animate-on-scroll>
+              <a href="page-vivsyane.html">
+                <img class="img-1" src="./IMG/вівсяне титулка.jpg">
+                <div class="hover-image1"></div>
+                <img class="img-icon" src="./IMG/button white.png" alt="img-icon">
+                <span id="oatmealcookies" class="button-text1">ВІВСЯНЕ ПЕЧИВО</span>
+            </a>
+        </div>
+        <div class="img-container2">
+            <div class="Overlay2" data-animate-on-scroll>
+            <a href="corn.html">
+            <img class="img-2" src="./IMG/Кук титул.jpg">
+            <div class="hover-image2"></div>
+            <img class="img-icon2" src="./IMG/button white.png" alt="img-icon">
+                <span id="oatmealcookies" class="button-text2">КУКУРУДЗЯНЕ ПЕЧИВО</span>
+            </a>
+                 </div>
+        </div>
+        <div class="img-container3">
+            <div class="Overlay3" data-animate-on-scroll>
+              <a href="dietary products.html">
+            <img class="img-3" src="./IMG/фруктдієт титул.jpg">
+            <div class="hover-image3"></div>
+            <img class="img-icon" src="./IMG/button white.png" alt="img-icon">
+                <span id="oatmealcookies" class="button-text3">ДІЄТИЧНЕ ПЕЧИВО</span>
+            </a>
+                </div>
+        </div>
+        <div class="img-container4">  
+            <div class="Overlay4" data-animate-on-scroll>  
+              <a href="drying.html"> 
+            <img class="img-4" src="./IMG/Сушка титул1.jpg">
+            <div class="hover-image4"></div>
+            <img class="img-icon" src="./IMG/button white.png" alt="img-icon">
+                <span id="oatmealcookies" class="button-text4">СУШКА</span>
+            </a>
+                </div>
+        </div>
+        <div class="img-container5"> 
+            <div class="Overlay5" data-animate-on-scroll>  
+              <a href="rusk.html">     
+            <img class="img-5" src="./IMG/Сухар титул.jpg">
+            <div class="hover-image5"></div>
+            <img class="img-icon" src="./IMG/button white.png" alt="img-icon">
+                <span id="oatmealcookies" class="button-text5">СУХАРІ</span>
+        </a>
+                </div>
+        </div>
+        <div class="img-container6"> 
+            <div class="Overlay6" data-animate-on-scroll>   
+            <a href="confectionery.html">  
+            <img class="img-6" src="./IMG/Труб1.jpg">
+            <div class="hover-image6"></div> 
+            <img class="img-icon7" src="./IMG/button white.png" alt="img-icon">
+                <span id="oatmealcookies" class="button-text6">КОНДИТЕРСЬКІ ВИРОБИ</span>
+            </a>
+                </div>
+        </div>
+            <div class="Overlay7" data-animate-on-scroll>   
+            <img class="img-7" src="./IMG/торт1.png">
+            <div class="hover-image9">
+            </div>
+        
+            <img class="img-icon" src="./IMG/button white.png" alt="img-icon">
+                <span id="oatmealcookies" class="button-text7">ТОРТИ І ТІСТЕЧКА</span>
+                </div>
+
+            <div class="img-container8"> 
+            <div class="Overlay8" data-animate-on-scroll>  
+            <a href="sweets.html">
+            <img class="img-8" src="./IMG/sweet1.jpg">
+            <div class="hover-image8"></div>
+            <img class="img-icon" src="./IMG/button white.png" alt="img-icon">
+                <span id="oatmealcookies" class="button-text8">ЦУКЕРКИ</span>
+            </a>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+               
+
+<!-- футер -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="icon-location">
+            <img class="location" src="./IMG/Icon-Set.png">
+            <img class="phone" src="./IMG/phone.png">
+        </div>
+        <div class="footer-text">
+            <p id="namecompany"> "ТОВ "ВИРОБНИК ПЛЮС"</p>
+            <p id="address">вул. Черкасова 31, м. Кривий ріг</p>
+            <p id="region">Дніпропетровська обл., 30079</p>  
+            <p id="contactnumber">+38 (067) 543 69 71</p>
+        </div>
+        <div class="footer-logo">
+        <img class="footer-logo-centr" src="./IMG/logo-navi@2x.png">
+        </div>
+        <div class="footer-social">
+            <div class="social-icons">
+                <div class="tittle-social">
+                    <p id="socialnetwork">Соціальні мережі</p>
+                </div>
+                <div class="icon-social">
+                <a href="https://www.facebook.com/SoyuzKonditer" class="icon-link"><img src="./IMG/FB icon.png" alt="Facebook icon"></a>
+                <a href="https://www.instagram.com/vyrobnykplyus" class="icon-link"><img src="./IMG/instagram icon.png" alt="Instagram icon"></a>
+            </div>
+            </div>
+        </div>
+    </div>
+</footer>     
+
+
+
+
+
+
+
+
+<script>
+// бургер
+const hamburgerIcon = document.querySelector('.hamburger-icon');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+hamburgerIcon.addEventListener('click', () => {
+  if (mobileMenu.style.display === 'block') {
+    mobileMenu.style.display = 'none';
+  } else {
+    mobileMenu.style.display = 'block';
+  }
+});
+
+// Додамо обробку кліку за межами вікна меню для його закриття
+document.addEventListener('click', (event) => {
+  const target = event.target;
+  const isHamburgerIcon = target.classList.contains('hamburger-icon');
+
+  if (!isHamburgerIcon && mobileMenu.style.display === 'block') {
+    mobileMenu.style.display = 'block';
+  }
+});
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth <= 900) {
+    document.getElementById('header').style.display = 'none';
+  } else {
+    document.getElementById('header').style.display = 'block';
+  }
+});
+
+// Викликемо подію resize один раз при завантаженні сторінки для визначення відразу відображення елементу
+window.dispatchEvent(new Event('resize'));
+
+
+
+var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+var observer = new IntersectionObserver(
+        (entries) => {
+            for (const entry of entries) {
+                if (entry.isIntersecting || entry.intersectionRatio > 0) {
+                    const targetElement = entry.target;
+                    targetElement.classList.add("animate1");
+                    observer.unobserve(targetElement);
+                }
+            }
+        },
+        {
+            threshold: 0.15,
+        }
+    );
+
+    for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+    }
+
+
+</script>
+
+
+</body>
+</html>
